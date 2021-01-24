@@ -51,7 +51,6 @@ public class ConsultationController {
 
         // Implement this method
 
-
         //Implement this method to get the list of test requests having status as 'LAB_TEST_COMPLETED'
         // make use of the findBy() method from testRequestQueryService class
         //return the result
