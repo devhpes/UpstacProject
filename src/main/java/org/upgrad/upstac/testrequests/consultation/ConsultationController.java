@@ -74,8 +74,10 @@ public class ConsultationController {
         //Make use of the findByDoctor() method from testRequestQueryService class to get the list
         // For reference check the method getForTests() method from LabRequestController class
         try {
+
             User doctor = userLoggedInService.getLoggedInUser();
             return testRequestQueryService.findByDoctor(doctor);
+
         } catch (Exception e) {
             throw new Exception("No Request List Found For Current Doctor");
         }
@@ -94,11 +96,13 @@ public class ConsultationController {
         // return the above created object
         // For reference check the method assignForLabTest() method from LabRequestController class
         try {
+
             User doctor = userLoggedInService.getLoggedInUser();
             return testRequestUpdateService.assignForConsultation(id, doctor);
-            // replace this line of code with your implementation
+
         } catch (AppException e) {
             throw asBadRequest(e.getMessage());
+            // replace this line of code with your implementation
         } catch (Exception e) {
             throw new Exception("Getting technical problem in assigning request to Doctor");
         }
@@ -118,8 +122,10 @@ public class ConsultationController {
         // For reference check the method updateLabTest() method from LabRequestController class
 
         try {
+
             User comment = userLoggedInService.getLoggedInUser();
             return testRequestUpdateService.updateConsultation(id, testResult, comment);
+
         } catch (ConstraintViolationException e) {
             throw asConstraintViolation(e);
         } catch (AppException e) {
