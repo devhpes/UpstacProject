@@ -72,7 +72,7 @@ public class LabRequestController {
 
         } catch (Exception e) {
             // replace this line with your code
-            throw new Exception("Something Went Wrong In Listing Request To Current Tester");
+            throw new Exception("Something Went Wrong In Listing Test Request To Current Tester");
         }
     }
 
